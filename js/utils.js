@@ -962,6 +962,14 @@ const anzhiyu = {
   },
   // 切换歌单
   changeMusicList: async function () {
+  const now = Date.now();
+    if (now - (this._changeMusicListLastTs || 0) < 1200) {
+      // 可选：提示一下
+       this.snackbarShow?.("操作太快啦，请稍后再试", false, 1200);
+      return;
+    }
+    this._changeMusicListLastTs = now;
+
     const anMusicPage = document.getElementById("anMusic-page");
     const metingAplayer = anMusicPage.querySelector("meting-js").aplayer;
     const currentTime = new Date().getTime();
