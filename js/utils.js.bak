@@ -970,17 +970,6 @@ const anzhiyu = {
     }
     this._changeMusicListLastTs = now;
 
-if (this._abortController) {
-    this._abortController.abort();
-    this._abortController = null;
-  }
-
-  const requestId = Date.now();          // 当前请求的唯一标识
-  this._currentRequestId = requestId;
-
-  const abortController = new AbortController();
-  this._abortController = abortController;
-
     const anMusicPage = document.getElementById("anMusic-page");
     const metingAplayer = anMusicPage.querySelector("meting-js").aplayer;
     const currentTime = new Date().getTime();
