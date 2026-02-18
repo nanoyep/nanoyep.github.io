@@ -970,16 +970,19 @@ const anzhiyu = {
     }
     this._changeMusicListLastTs = now;
 
-if (this._abortController) {
-    this._abortController.abort();
-    this._abortController = null;
+  // 取消上一次未完成的 fetch 请求
+  if (this._musicChangeController) {
+    this._musicChangeController.abort();
+    this._musicChangeController = null;
   }
 
-  const requestId = Date.now();          // 当前请求的唯一标识
-  this._currentRequestId = requestId;
+  // 生成当前请求的唯一 ID
+  const requestId = Date.now();
+  this._currentMusicChangeRequestId = requestId;
 
+  // 创建新的 AbortController 用于本次请求
   const abortController = new AbortController();
-  this._abortController = abortController;
+  this._musicChangeController = abortController;
 
     const anMusicPage = document.getElementById("anMusic-page");
     const metingAplayer = anMusicPage.querySelector("meting-js").aplayer;
