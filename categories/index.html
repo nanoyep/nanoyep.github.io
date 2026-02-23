@@ -5,7 +5,7 @@
   diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
   LA51: undefined,
   greetingBox: undefined,
-  twikooEnvId: 'https://cm.ciao.de5.net/.netlify/functions/twikoo',
+  twikooEnvId: 'https://cm.nanoyep.us.ci/.netlify/functions/twikoo',
   commentBarrageConfig:undefined,
   music_page_default: "nav_music",
   root: '/',
@@ -214,18 +214,13 @@ if (true) {
         <span class="tagsPageCount">2</span>
       </a>
     
-      <a href="/categories/GIT/" id="/categories/GIT/">
-        <span class="tags-punctuation">#</span>GIT
-        <span class="tagsPageCount">1</span>
-      </a>
-    
       <a href="/categories/伊朗/" id="/categories/伊朗/">
         <span class="tags-punctuation">#</span>伊朗
         <span class="tagsPageCount">1</span>
       </a>
     
-      <a href="/categories/GIT/SSH/" id="/categories/GIT/SSH/">
-        <span class="tags-punctuation">#</span>SSH
+      <a href="/categories/GIT/" id="/categories/GIT/">
+        <span class="tags-punctuation">#</span>GIT
         <span class="tagsPageCount">1</span>
       </a>
     
@@ -234,13 +229,18 @@ if (true) {
         <span class="tagsPageCount">1</span>
       </a>
     
-      <a href="/categories/GIT/SSH/GIT仓库/" id="/categories/GIT/SSH/GIT仓库/">
-        <span class="tags-punctuation">#</span>GIT仓库
+      <a href="/categories/GIT/SSH/" id="/categories/GIT/SSH/">
+        <span class="tags-punctuation">#</span>SSH
         <span class="tagsPageCount">1</span>
       </a>
     
       <a href="/categories/伊朗/暴乱/国际/" id="/categories/伊朗/暴乱/国际/">
         <span class="tags-punctuation">#</span>国际
+        <span class="tagsPageCount">1</span>
+      </a>
+    
+      <a href="/categories/GIT/SSH/GIT仓库/" id="/categories/GIT/SSH/GIT仓库/">
+        <span class="tags-punctuation">#</span>GIT仓库
         <span class="tagsPageCount">1</span>
       </a>
     </div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2025 - 2026 By <a class="footer-bar-link" href="/" title="Nanoyep" target="_blank">Nanoyep</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
@@ -349,7 +349,7 @@ queueMicrotask(() => {
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'https://cm.ciao.de5.net/.netlify/functions/twikoo',
+      envId: 'https://cm.nanoyep.us.ci/.netlify/functions/twikoo',
       region: 'ap-hongkong',
       onCommentLoaded: () => {
         anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -366,7 +366,7 @@ queueMicrotask(() => {
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'https://cm.ciao.de5.net/.netlify/functions/twikoo',
+      envId: 'https://cm.nanoyep.us.ci/.netlify/functions/twikoo',
       region: 'ap-hongkong',
       urls: [window.location.pathname],
       includeReply: false
@@ -408,7 +408,7 @@ queueMicrotask(() => {
   const getComment = () => {
     const runTwikoo = () => {
       twikoo.getRecentComments({
-        envId: 'https://cm.ciao.de5.net/.netlify/functions/twikoo',
+        envId: 'https://cm.nanoyep.us.ci/.netlify/functions/twikoo',
         region: 'ap-hongkong',
         pageSize: 6,
         includeReply: true
